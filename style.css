@@ -1,0 +1,73 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #020202;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+canvas{display:block}
+span{
+  position: absolute;
+  background: url(heart.png);
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  transform: translate(-50%,-50%);
+  animation: animate 2s linear infinite;
+}
+@keyframes animate{
+  0% {
+      transform: translate(-50%,-50%);
+      opacity: 1;
+      filter:hue-rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%,-1000%);
+      opacity: 0;
+      filter: hue-rotate(720deg);
+  }
+
+}
+
+h4 {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 45%;
+    color: #fff;
+    text-shadow: 0 0 5px lightpink;
+    line-height: 1.6;
+    text-align: left;
+    font-family: cursive;
+}
+
+h1 {
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+font-family: "Source Sans Pro";
+font-size: 4em;
+font-weight: 900;
+-webkit-user-select: none;
+user-select: none;
+animation: h1 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes h1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+

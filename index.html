@@ -19,8 +19,10 @@
       <p class="signature">Forever yours, Unnie ❤️</p>
     </div>
     <canvas id="birthday"></canvas>
+
+    <!-- HEARTS -->
     <script type="text/javascript">
-      document.addEventListener('mousemove',function(e){
+      document.addEventListener('mousemove', function(e){
           var body = document.querySelector('body');
           var heart = document.createElement('span');
           var x = e.offsetX;
@@ -35,13 +37,22 @@
           setTimeout(function(){
               heart.remove();
           },2000);
-      })
-  </script>
-	<script src="script.js"></script>
+      });
+    </script>
+
+    <!-- MUSIC -->
+    <audio id="bg-music" loop>
+      <source src="romantic-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const music = document.getElementById("bg-music");
+
+      document.addEventListener("click", function () {
+          music.play();
+      }, { once: true });
+    </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-

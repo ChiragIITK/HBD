@@ -6,20 +6,26 @@
 
 body {
     margin: 0;
-    background: #020202;
+    background: radial-gradient(circle at top, #2b0018, #000000 70%);
     overflow: hidden;
     cursor: crosshair;
+    animation: fadeIn 2s ease-in;
   }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 canvas{display:block}
-span{
+span {
   position: absolute;
   background: url(heart.png);
   pointer-events: none;
-  width: 100px;
-  height: 100px;
   background-size: cover;
   transform: translate(-50%,-50%);
   animation: animate 2s linear infinite;
+  filter: drop-shadow(0 0 10px pink);
 }
 @keyframes animate{
   0% {
@@ -36,30 +42,72 @@ span{
 }
 
 h4 {
-    position: absolute;
-    left: 15%;
+    /* position: absolute; */
+    /* left: 15%;
     right: 15%;
-    top: 45%;
+    top: 45%; */
     color: #fff;
     text-shadow: 0 0 5px lightpink;
     line-height: 1.6;
-    text-align: left;
-    font-family: cursive;
+    text-align: center;
+    animation: float 3s ease-in-out infinite alternate;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
 }
 
 h1 {
-position: absolute;
-top: 20%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: #fff;
-font-family: "Source Sans Pro";
-font-size: 4em;
+/* position: absolute; */
+/* top: 20%;
+left: 50%; */
+/* transform: translate(-50%, -50%); */
+/* color: #fff;
 font-weight: 900;
 -webkit-user-select: none;
 user-select: none;
 animation: h1 1s ease-in-out infinite alternate;
+font-family: 'Great Vibes', cursive;
+font-size: 4.5em;
+letter-spacing: 2px; */
+color: #fff;
+font-family: 'Great Vibes', cursive;
+font-size: 4.5em;
+letter-spacing: 2px;
+margin-bottom: 20px;   /* space between title & paragraph */
+animation: h1 1s ease-in-out infinite alternate;
 }
+
+.signature {
+  margin-top: 30px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  color: #ff4da6;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff4da6; }
+  to { text-shadow: 0 0 20px #ff4da6; }
+}
+
+
+.love-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
+  max-width: 800px;
+}
+
+
+
 
 @-webkit-keyframes h1 {
     from {
